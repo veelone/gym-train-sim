@@ -1,0 +1,1126 @@
+getgenv().autoTap = false;
+getgenv().autoTrain = false;
+getgenv().autoRebirth = false;
+getgenv().autoEgg = false;
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Gym Training Simulator", "Midnight")
+local Main = Window:NewTab("Main")
+local MainSec = Main:NewSection("Main")
+local Rebirths = Window:NewTab("Rebirths")
+local RebirthSec = Rebirths:NewSection("Rebirths")
+local Eggs = Window:NewTab("Eggs")
+local EggSec = Eggs:NewSection("Eggs(need to be in range of egg gui)")
+local TelePort = Window:NewTab("Teleports")
+local TeleSec = TelePort:NewSection("Teleports")
+local Misc = Window:NewTab("Misc")
+local MiscSec = Misc:NewSection("Misc")
+MainSec:NewToggle("Auto Click", "Auto click", function(v)
+getgenv().autoTap = v
+spawn(function()
+    while getgenv().autoTap == true do
+        wait()
+local args = {
+    [1] = "Tapping"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Tapping:FireServer(unpack(args))
+
+    end
+end)
+end)
+
+
+MainSec:NewToggle("Auto Train", "Auto trains", function(v)
+    getgenv().autoTrain = v
+    spawn(function()
+        while getgenv().autoTrain == true do
+            wait()
+local args = {
+    [1] = "Training",
+    [2] = workspace.__WORKSPACE.__Interact.Training
+}
+
+game:GetService("ReplicatedStorage").Remotes.Training:FireServer(unpack(args))
+
+        end
+    end)
+end)
+
+RebirthSec:NewToggle("1 Rebirth", "1 Rebirth", function(v)
+getgenv().autoRebirth = v
+spawn(function()
+    while getgenv().autoRebirth == true do
+        wait()
+local args = {
+    [1] = "Rebirths",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+
+    end
+    end)
+end)
+RebirthSec:NewToggle("5 Rebirth", "5 Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 2
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("8 Rebirth", "8 Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 3
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("15 Rebirth", "15 Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 4
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("35 Rebirth", "35 Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 5
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("65 Rebirth", "65 Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 6
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("95 Rebirth", "95 Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 7
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("150 Rebirth", "150 Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 8
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("250 Rebirth", "250 Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 9
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("500 Rebirth", "500 Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 10
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("900 Rebirth", "900 Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 11
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("1.5k Rebirth", "1.5k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 12
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("2.5k Rebirth", "2.5k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 13
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("3.5k Rebirth", "3.5k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 14
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("5.5k Rebirth", "5.5k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 15
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("8.5k Rebirth", "8.5k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 16
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("12k Rebirth", "12k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 17
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("15k Rebirth", "15k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 18
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("25k Rebirth", "25k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 19
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("35k Rebirth", "35k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 20
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("45k Rebirth", "45k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 21
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("50k Rebirth", "50k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 22
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("70k Rebirth", "70k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 23
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("80k Rebirth", "80k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 24
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("90k Rebirth", "90k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 25
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("120k Rebirth", "120k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 26
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("150k Rebirth", "150k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 27
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("180k Rebirth", "180k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 28
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("220k Rebirth", "220k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 29
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("280k Rebirth", "280k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 30
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("320k Rebirth", "320k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 31
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("420k Rebirth", "420k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 32
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("520k Rebirth", "520k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 33
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("820k Rebirth", "820k Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 34
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("1.82M Rebirth", "1.82M Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 35
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("2.82M Rebirth", "2.82M Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 36
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("4.82M Rebirth", "4.82M Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 37
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("8.82M Rebirth", "8.82M Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 38
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("12.82M Rebirth", "12.82M Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 39
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("15.82M Rebirth", "15.82M Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 40
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("25.82M Rebirth", "25.82M Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 41
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("55.82M Rebirth", "55.82M Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 42
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("100.82M Rebirth", "100.82M Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 43
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("200.82M Rebirth", "200.82M Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 44
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("450.82M Rebirth", "450.82M Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 45
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("950.82M Rebirth", "950.82M Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 46
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("1.3B Rebirth", "1.3B Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 47
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("1.95B Rebirth", "1.95B Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 48
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("3.45B Rebirth", "3.45B Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 49
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("7.5B Rebirth", "7.5B Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 50
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("15.5B Rebirth", "15.5B Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 51
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("34.5B Rebirth", "34.5B Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 52
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("52B Rebirth", "52B Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 53
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("95B Rebirth", "95B Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 54
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+RebirthSec:NewToggle("175B Rebirth", "175B Rebirth", function(v)
+    getgenv().autoRebirth = v
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            wait()
+    local args = {
+        [1] = "Rebirths",
+        [2] = 55
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+TeleSec:NewButton("Little Island", "Teleports to island", function()
+function teleportTO(placeCFrame)
+    local player = game.Players.LocalPlayer;
+    if player.Character then
+    player.Character.HumanoidRootPart.CFrame = placeCFrame;
+    end
+    end
+    teleportTO(game:GetService("Workspace")['Little Island'].Part.CFrame)
+
+    function teleportZone(zone)
+        if game:GetService("Workspace"):FindFirstChild(zone) then
+            teleportTO(game:GetService("Workspace")['Little Island'].Part.CFrame)
+        end
+end
+    
+    teleportZone('Little Island')
+end)
+TeleSec:NewButton("Enchanted Island", "Teleports to island", function()
+    function teleportTO(placeCFrame)
+        local player = game.Players.LocalPlayer;
+        if player.Character then
+        player.Character.HumanoidRootPart.CFrame = placeCFrame;
+        end
+        end
+        teleportTO(game:GetService("Workspace")['Enchanted Island'].Part.CFrame)
+    
+        function teleportZone(zone)
+            if game:GetService("Workspace"):FindFirstChild(zone) then
+                teleportTO(game:GetService("Workspace")['Enchanted Island'].Part.CFrame)
+            end
+    end
+        
+        teleportZone('Enchanted Island')
+    end)
+    TeleSec:NewButton("Temple Island", "Temple to island", function()
+        function teleportTO(placeCFrame)
+            local player = game.Players.LocalPlayer;
+            if player.Character then
+            player.Character.HumanoidRootPart.CFrame = placeCFrame;
+            end
+            end
+            teleportTO(game:GetService("Workspace")['Temple Island'].Part.CFrame)
+        
+            function teleportZone(zone)
+                if game:GetService("Workspace"):FindFirstChild(zone) then
+                    teleportTO(game:GetService("Workspace")['Temple Island'].Part.CFrame)
+                end
+        end
+            
+            teleportZone('Temple Island')
+        end)
+        TeleSec:NewButton("Mythical Island", "Teleports to island", function()
+            function teleportTO(placeCFrame)
+                local player = game.Players.LocalPlayer;
+                if player.Character then
+                player.Character.HumanoidRootPart.CFrame = placeCFrame;
+                end
+                end
+                teleportTO(game:GetService("Workspace")['Mythical Island'].Part.CFrame)
+            
+                function teleportZone(zone)
+                    if game:GetService("Workspace"):FindFirstChild(zone) then
+                        teleportTO(game:GetService("Workspace")['Mythical Island'].Part.CFrame)
+                    end
+            end
+                
+                teleportZone('Mythical Island')
+            end)
+            TeleSec:NewButton("Beach Island", "Teleports to island", function()
+                function teleportTO(placeCFrame)
+                    local player = game.Players.LocalPlayer;
+                    if player.Character then
+                    player.Character.HumanoidRootPart.CFrame = placeCFrame;
+                    end
+                    end
+                    teleportTO(game:GetService("Workspace")['Beach Island'].Part.CFrame)
+                
+                    function teleportZone(zone)
+                        if game:GetService("Workspace"):FindFirstChild(zone) then
+                            teleportTO(game:GetService("Workspace")['Beach Island'].Part.CFrame)
+                        end
+                end
+                    
+                    teleportZone('Beach Island')
+                end)
+                TeleSec:NewButton("Flower Island", "Teleports to island", function()
+                    function teleportTO(placeCFrame)
+                        local player = game.Players.LocalPlayer;
+                        if player.Character then
+                        player.Character.HumanoidRootPart.CFrame = placeCFrame;
+                        end
+                        end
+                        teleportTO(game:GetService("Workspace")['Flower Island'].Part.CFrame)
+                    
+                        function teleportZone(zone)
+                            if game:GetService("Workspace")['Flower Island']:FindFirstChild(zone) then
+                                teleportTO(game:GetService("Workspace")['Flower Island'].Part.CFrame)
+                            end
+                    end
+                        
+                        teleportZone('Flower Island')
+                    end)
+                    TeleSec:NewButton("Volcano Island", "Teleports to island", function()
+                        function teleportTO(placeCFrame)
+                            local player = game.Players.LocalPlayer;
+                            if player.Character then
+                            player.Character.HumanoidRootPart.CFrame = placeCFrame;
+                            end
+                            end
+                            teleportTO(game:GetService("Workspace")['Volcano Island'].Part.CFrame)
+                        
+                            function teleportZone(zone)
+                                if game:GetService("Workspace").Maps:FindFirstChild(zone) then
+                                    teleportTO(game:GetService("Workspace")['Volcano Island'].Part.CFrame)
+                                end
+                        end
+                            
+                            teleportZone('Volcano Island')
+                        end)
+                        TeleSec:NewButton("Cyber Island", "Teleports to island", function()
+                            function teleportTO(placeCFrame)
+                                local player = game.Players.LocalPlayer;
+                                if player.Character then
+                                player.Character.HumanoidRootPart.CFrame = placeCFrame;
+                                end
+                                end
+                                teleportTO(game:GetService("Workspace")['Cyber Island'].Part.CFrame)
+                            
+                                function teleportZone(zone)
+                                    if game:GetService("Workspace"):FindFirstChild(zone) then
+                                        teleportTO(game:GetService("Workspace")['Cyber Island'].Part.CFrame)
+                                    end
+                            end
+                                
+                                teleportZone('Cyber Island')
+                            end)
+
+
+
+
+                            EggSec:NewToggle("Basic Egg", "Auto opens egg", function(v)
+                                getgenv().autoEgg = v
+                                spawn(function()
+                                    while getgenv().autoEgg == true do
+                                    wait()
+local args = {
+    [1] = "EGG",
+    [2] = {
+        [1] = workspace.__WORKSPACE.__Eggs:FindFirstChild("Basic Egg"),
+        [2] = 1,
+        [3] = {}
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+
+                                    end
+
+                                end)
+                            end)
+                            EggSec:NewToggle("Earth Egg", "Auto opens egg", function(v)
+                                getgenv().autoEgg = v
+                                spawn(function()
+                                    while getgenv().autoEgg == true do
+                                    wait()
+local args = {
+    [1] = "EGG",
+    [2] = {
+        [1] = workspace.__WORKSPACE.__Eggs:FindFirstChild("Earth Egg"),
+        [2] = 1,
+        [3] = {}
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+EggSec:NewToggle("Enchanted Egg", "Auto opens egg", function(v)
+    getgenv().autoEgg = v
+    spawn(function()
+        while getgenv().autoEgg == true do
+        wait()
+local args = {
+[1] = "EGG",
+[2] = {
+[1] = workspace.__WORKSPACE.__Eggs:FindFirstChild("Enchanted Egg"),
+[2] = 1,
+[3] = {}
+}
+}
+
+game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+EggSec:NewToggle("Temple Egg", "Auto opens egg", function(v)
+    getgenv().autoEgg = v
+    spawn(function()
+        while getgenv().autoEgg == true do
+        wait()
+local args = {
+[1] = "EGG",
+[2] = {
+[1] = workspace.__WORKSPACE.__Eggs:FindFirstChild("Temple Egg"),
+[2] = 1,
+[3] = {}
+}
+}
+
+game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+EggSec:NewToggle("Beach Egg", "Auto opens egg", function(v)
+    getgenv().autoEgg = v
+    spawn(function()
+        while getgenv().autoEgg == true do
+        wait()
+local args = {
+[1] = "EGG",
+[2] = {
+[1] = workspace.__WORKSPACE.__Eggs:FindFirstChild("Beach Egg"),
+[2] = 1,
+[3] = {}
+}
+}
+
+game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+EggSec:NewToggle("Lava Egg", "Auto opens egg", function(v)
+    getgenv().autoEgg = v
+    spawn(function()
+        while getgenv().autoEgg == true do
+        wait()
+local args = {
+[1] = "EGG",
+[2] = {
+[1] = workspace.__WORKSPACE.__Eggs:FindFirstChild("Lava Egg"),
+[2] = 1,
+[3] = {}
+}
+}
+
+game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+EggSec:NewToggle("Frozen Lava Egg(robux)", "Auto opens egg", function(v)
+    getgenv().autoEgg = v
+    spawn(function()
+        while getgenv().autoEgg == true do
+        wait()
+local args = {
+[1] = "EGG",
+[2] = {
+[1] = workspace.__WORKSPACE.__Eggs:FindFirstChild("Frozen Lava Egg"),
+[2] = 1,
+[3] = {}
+}
+}
+
+game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+EggSec:NewToggle("Cyber Egg", "Auto opens egg", function(v)
+    getgenv().autoEgg = v
+    spawn(function()
+        while getgenv().autoEgg == true do
+        wait()
+local args = {
+[1] = "EGG",
+[2] = {
+[1] = workspace.__WORKSPACE.__Eggs:FindFirstChild("Cyber Egg"),
+[2] = 1,
+[3] = {}
+}
+}
+
+game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+EggSec:NewToggle("Lava Cyber Egg(robux)", "Auto opens egg", function(v)
+    getgenv().autoEgg = v
+    spawn(function()
+        while getgenv().autoEgg == true do
+        wait()
+local args = {
+[1] = "EGG",
+[2] = {
+[1] = workspace.__WORKSPACE.__Eggs:FindFirstChild("Lava Cyber Egg"),
+[2] = 1,
+[3] = {}
+}
+}
+
+game:GetService("ReplicatedStorage").Remotes.RefeshClient:FireServer(unpack(args))
+end
+end)
+end)
+MiscSec:NewLabel("Credits to velone#0857")
